@@ -1,15 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { UserComponent } from "./user/user.component";
-
+import { RouterModule, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, UserComponent],
-  template: ` <app-user/> ` ,
-  styles: ``
+  imports: [RouterOutlet, CommonModule, RouterModule],
+  template: `<router-outlet><router-outlet/>`,
+  styles: ``,
 })
 export class AppComponent {
-  city = "Bucaramnga";
+
 }
